@@ -1,0 +1,9 @@
+<div class="d-flex m-2 p-2 justify-content-between">
+  <% @restaurants.each do |restaurant| %>
+  <div class="card rounded py-5" style="width: 12rem; height: 10rem; text-align: center;">
+      <%= link_to restaurant.name, restaurant_path(restaurant), class: "card-body" %>
+  </div>
+  <% end %>
+</div>
+
+<h5>Create a new restaurant : <%= link_to 'tap here', new_restaurant_path, class: "btn btn-primary m-2" %></h5>
